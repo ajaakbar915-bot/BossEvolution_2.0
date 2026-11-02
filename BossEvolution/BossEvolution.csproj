@@ -1,24 +1,35 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net9.0</TargetFramework>
+    <OutputType>Library</OutputType>
+    <AssemblyName>BossEvolution</AssemblyName>
+    <RootNamespace>BossEvolution</RootNamespace>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>disable</Nullable>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
   </PropertyGroup>
 
+  <!--
+    Cara A (NuGet) - sesuaikan versi jika perlu:
+    <ItemGroup>
+      <PackageReference Include="TShockCereal" Version="1.0.0" />
+    </ItemGroup>
+
+    Cara B (paling umum di TShock 6) - reference DLL dari folder server:
+  -->
   <ItemGroup>
-    <Reference Include="TerrariaServer">
-      <HintPath>..\lib\TerrariaServer.dll</HintPath>
-    </Reference>
     <Reference Include="TShockAPI">
-      <HintPath>..\lib\TShockAPI.dll</HintPath>
+      <HintPath>lib\TShockAPI.dll</HintPath>
+      <Private>false</Private>
     </Reference>
     <Reference Include="OTAPI">
-      <HintPath>..\lib\OTAPI.dll</HintPath>
+      <HintPath>lib\OTAPI.dll</HintPath>
+      <Private>false</Private>
     </Reference>
-    <Reference Include="ModFramework">
-      <HintPath>..\lib\ModFramework.dll</HintPath>
+    <Reference Include="TerrariaServer">
+      <HintPath>lib\TerrariaServer.dll</HintPath>
+      <Private>false</Private>
     </Reference>
   </ItemGroup>
-
-</Project> 
+</Project>
