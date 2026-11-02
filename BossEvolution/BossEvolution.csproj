@@ -10,14 +10,6 @@
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
   </PropertyGroup>
 
-  <!--
-    Cara A (NuGet) - sesuaikan versi jika perlu:
-    <ItemGroup>
-      <PackageReference Include="TShockCereal" Version="1.0.0" />
-    </ItemGroup>
-
-    Cara B (paling umum di TShock 6) - reference DLL dari folder server:
-  -->
   <ItemGroup>
     <Reference Include="TShockAPI">
       <HintPath>lib\TShockAPI.dll</HintPath>
